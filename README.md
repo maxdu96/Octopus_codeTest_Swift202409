@@ -8,5 +8,9 @@ The first interview started in mid-August 2024, and I received the result in mid
 ##### Project Video:
 This project was entirely based on the document's images to create both the UI and functionality. I estimate that I was just a little short of perfection. Did I forget to move the [cellForRowAt] context into the [Tablviewcell] to handle it there?
 
-https://github.com/user-attachments/assets/42aa36f0-d24c-45b9-bd96-53fd7c811fcd
+
+
+https://github.com/user-attachments/assets/2e6f7f26-587f-494a-a02a-2abbefdbe3fc
+
+
 
