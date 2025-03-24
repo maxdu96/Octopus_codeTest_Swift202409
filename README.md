@@ -1,7 +1,7 @@
 # A IOS developer code test from Octopus HK
+This project is only to share my experience. If there is any offense, please contact me for deletion.
 ___
 
-This project is only to share my experience. If there is any offense, please contact me for deletion.
 The first interview started in mid-August 2024, and I received the result in mid-October 2024. During this period, there were three interviews and one skill test. One candidate scored higher than me (my score was above 85, which theoretically reached the score for an offer). However, due to the lack of headcount, I was not selected, so I did not receive an offer.
 
 
