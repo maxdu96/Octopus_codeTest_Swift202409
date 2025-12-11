@@ -17,7 +17,8 @@
 		5069664B2CA45E3400FE6FAE /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069664A2CA45E3400FE6FAE /* CustomHeaderView.swift */; };
 		5069664D2CA4655100FE6FAE /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069664C2CA4655100FE6FAE /* CustomTableViewCell.swift */; };
 		5069664F2CA50F8600FE6FAE /* ExtensionFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5069664E2CA50F8600FE6FAE /* ExtensionFile.swift */; };
-		506966562CA517E500FE6FAE /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 506966552CA517E500FE6FAE /* Constant.swift */; };
+		EA8D07342EEAA32400ACA2FF /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8D07332EEAA31E00ACA2FF /* Helper.swift */; };
+		EA8D07362EEAB55D00ACA2FF /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA8D07352EEAB55D00ACA2FF /* CustomHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,8 @@
 		5069664A2CA45E3400FE6FAE /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
 		5069664C2CA4655100FE6FAE /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		5069664E2CA50F8600FE6FAE /* ExtensionFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionFile.swift; sourceTree = "<group>"; };
-		506966552CA517E500FE6FAE /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		EA8D07332EEAA31E00ACA2FF /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		EA8D07352EEAB55D00ACA2FF /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				5069664A2CA45E3400FE6FAE /* CustomHeaderView.swift */,
+				EA8D07352EEAB55D00ACA2FF /* CustomHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,8 +119,8 @@
 		506966542CA5176C00FE6FAE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				EA8D07332EEAA31E00ACA2FF /* Helper.swift */,
 				5069664E2CA50F8600FE6FAE /* ExtensionFile.swift */,
-				506966552CA517E500FE6FAE /* Constant.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA8D07362EEAB55D00ACA2FF /* CustomHeaderView.xib in Resources */,
 				5069663E2CA45CD800FE6FAE /* Assets.xcassets in Resources */,
 				506966412CA45CD800FE6FAE /* Base in Resources */,
 				5069663C2CA45CD600FE6FAE /* Base in Resources */,
@@ -196,11 +200,11 @@
 				5069664D2CA4655100FE6FAE /* CustomTableViewCell.swift in Sources */,
 				5069664B2CA45E3400FE6FAE /* CustomHeaderView.swift in Sources */,
 				506966392CA45CD600FE6FAE /* ViewController.swift in Sources */,
-				506966562CA517E500FE6FAE /* Constant.swift in Sources */,
 				5069664F2CA50F8600FE6FAE /* ExtensionFile.swift in Sources */,
 				506966352CA45CD600FE6FAE /* AppDelegate.swift in Sources */,
 				506966372CA45CD600FE6FAE /* SceneDelegate.swift in Sources */,
 				506966492CA45D3700FE6FAE /* BanksModel.swift in Sources */,
+				EA8D07342EEAA32400ACA2FF /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,6 +356,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KAN3S4GU5U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CodeTestIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -364,7 +369,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxdu.CodeTestIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -384,6 +389,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = KAN3S4GU5U;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CodeTestIOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -396,7 +402,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.maxdu.CodeTestIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

@@ -7,224 +7,288 @@
 
 import UIKit
 
+// Hard code example JSON data
+let jsonData = """
+{
+    "banks": [{
+            "nameEn": "China Construction Bank (Asia)",
+            "descEn": "Complete via bank app",
+            "actions": {
+                "recommended": [{
+                    "titleEn": "Via Bank App",
+                    "type": "link",
+                    "urlEn": "https://www.octopus.com.hk/landingpage"
+                }],
+                "more": [{
+                    "titleEn": "Download AAVS Application Form",
+                    "type": "link",
+                    "urlEn": "http://www.asia.ccb.com/hongkong_tc/doc/personal/credit_cards/CCBA_OAAVS.pdf"
+                }]
+            }
+        },
+        {
+            "nameEn": "ICBC (Asia)",
+            "descEn": "Complete via bank app",
+            "actions": {
+                "recommended": [{
+                    "titleEn": "Via Bank App",
+                    "type": "link",
+                    "urlEn": "com.icbc.icbcasia://launch"
+                }],
+                "more": [{
+                    "titleEn": "Download AAVS Application Form",
+                    "type": "link",
+                    "urlEn": "https://v.icbc.com.cn/userfiles/Resources/ICBC/haiwai/Asia/download/EN/2020/OctopusFormE_apr2020.pdf"
+                }]
+            }
+        },
+        {
+            "nameEn": "HSBC",
+            "actions": {
+                "recommended": [{
+                    "titleEn": "Via Bank App",
+                    "type": "link",
+                    "urlEn": "com.icbc.icbcasia://launch"
+                }],
+                "more": [{
+                        "titleEn": "Via Online Bank Service",
+                        "type": "link",
+                        "urlEn": "https://www.hsbc.com.hk/octopus-aavs-apply/"
+                    },
+                    {
+                        "titleEn": "Dial <font color='#C85204'>22333000</font>",
+                        "type": "phone",
+                        "urlEn": "tel:22333000"
+                    },
+                    {
+                        "titleEn": "Download AAVS Application Form",
+                        "type": "link",
+                        "urlEn": "https://www.hsbc.com.hk/content/dam/hsbc/hk/docs/credit-cards/aavs-appform.pdf"
+                    }
+                ]
+            }
+        },
+        {
+            "nameEn": "Hang Seng Bank",
+            "actions": {
+                "recommended": [{
+                        "titleEn": "Via Bank App",
+                        "type": "link",
+                        "urlEn": "com.icbc.icbcasia://launch"
+                    },
+                    {
+                        "titleEn": "Dial <font color='#C85204'>29986899</font>",
+                        "type": "phone",
+                        "urlEn": "tel:29986899"
+                    }
+                ],
+                "more": [{
+                        "titleEn": "Via Online Bank Service",
+                        "type": "link",
+                        "urlEn": "https://e-banking2.hangseng.com/en-hk/online/card/other-related-services/octopus/#/landing"
+                    },
+                    {
+                        "titleEn": "Download AAVS Application Form",
+                        "type": "link",
+                        "urlEn": "https://www.hangseng.com/content/dam/hase/en_hk/personal/pdf/aavs_form_eng.pdf"
+                    }
+                ]
+            }
+        },
+        {
+            "nameEn": "China Construction Bank (Asia)1",
+            "descEn": "Complete via bank app1",
+            "actions": {
+                "recommended": [{
+                    "titleEn": "Via Bank App1",
+                    "type": "link",
+                    "urlEn": "https://www.octopus.com.hk/landingpage"
+                }],
+                "more": [{
+                    "titleEn": "Download AAVS Application Form1",
+                    "type": "link",
+                    "urlEn": "http://www.asia.ccb.com/hongkong_tc/doc/personal/credit_cards/CCBA_OAAVS.pdf"
+                }]
+            }
+        },
+        {
+            "nameEn": "China Construction Bank (Asia)2",
+            "descEn": "Complete via bank app2",
+            "actions": {
+                "recommended": [{
+                    "titleEn": "Via Bank App2",
+                    "type": "link",
+                    "urlEn": "https://www.octopus.com.hk/landingpage"
+                }],
+                "more": [{
+                    "titleEn": "Download AAVS Application Form2",
+                    "type": "link",
+                    "urlEn": "http://www.asia.ccb.com/hongkong_tc/doc/personal/credit_cards/CCBA_OAAVS.pdf"
+                }]
+            }
+        },
+        {
+            "nameEn": "China Construction Bank (Asia)3",
+            "descEn": "Complete via bank app3",
+            "actions": {
+                "recommended": [{
+                    "titleEn": "Via Bank App3",
+                    "type": "link",
+                    "urlEn": "https://www.octopus.com.hk/landingpage"
+                }],
+                "more": [{
+                    "titleEn": "Download AAVS Application Form3",
+                    "type": "link",
+                    "urlEn": "http://www.asia.ccb.com/hongkong_tc/doc/personal/credit_cards/CCBA_OAAVS.pdf"
+                }]
+            }
+        },
+        {
+            "nameEn": "China Construction Bank (Asia)4",
+            "descEn": "Complete via bank app4",
+            "actions": {
+                "recommended": [{
+                    "titleEn": "Via Bank App4",
+                    "type": "link",
+                    "urlEn": "https://www.octopus.com.hk/landingpage"
+                }],
+                "more": [{
+                    "titleEn": "Download AAVS Application Form4",
+                    "type": "link",
+                    "urlEn": "http://www.asia.ccb.com/hongkong_tc/doc/personal/credit_cards/CCBA_OAAVS.pdf"
+                }]
+            }
+        },
+        {
+            "nameEn": "China Construction Bank (Asia)5",
+            "descEn": "Complete via bank app5",
+            "actions": {
+                "recommended": [{
+                    "titleEn": "Via Bank App5",
+                    "type": "link",
+                    "urlEn": "https://www.octopus.com.hk/landingpage"
+                }],
+                "more": [{
+                    "titleEn": "Download AAVS Application Form5",
+                    "type": "link",
+                    "urlEn": "http://www.asia.ccb.com/hongkong_tc/doc/personal/credit_cards/CCBA_OAAVS.pdf"
+                }]
+            }
+        }
+    ]
+}
+""".data(using: .utf8)!
+
+
 class ViewController: UIViewController {
-    
+
     @IBOutlet weak var tableview: UITableView!
-    
+
     var banksData: [Bank] = []
-    
-    let recommendedText = Constant.recommendedString
-    let moreText = Constant.moreString
-    
+
+    let helper = Helper.shared
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         loadBanks()
     }
-    
+
     fileprivate func setupUI() {
         tableview.delegate = self
         tableview.dataSource = self
+
+        tableview.register(CustomHeaderView.nib, forHeaderFooterViewReuseIdentifier: CustomHeaderView.identifier)
     }
-    
+
     fileprivate func loadBanks() {
         do {
             let banksResponse = try JSONDecoder().decode(BanksModel.self, from: jsonData)
             banksData = banksResponse.banks
             tableview.reloadData()
-            print(banksData)
+            print("func loadBanks() banksData: ", banksData)
         } catch {
             print("Failed to decode JSON: \(error)")
         }
     }
-    
-    
-    func splitPhoneString(_ text: String) -> NSAttributedString? {
-        let pattern = "(Dial)\\s*<font color='(#[0-9A-Fa-f]{6})'>(\\d+)</font>"
-        
-        do {
-            let regex = try NSRegularExpression(pattern: pattern, options: [])
-            let nsString = text as NSString
-            let results = regex.matches(in: text, options: [], range: NSRange(location: 0, length: nsString.length))
-            
-            if let match = results.first {
-                let dial = nsString.substring(with: match.range(at: 1))
-                let color = nsString.substring(with: match.range(at: 2))
-                let number = nsString.substring(with: match.range(at: 3))
-                let attributedString = NSMutableAttributedString(string: "\(dial) \(number)")
-                print("Dial: \(dial)")
-                print("Color: \(color)")
-                print("Number: \(number)")
-                
-                attributedString.addAttribute(.foregroundColor, value: UIColor(hex: color), range: NSRange(location: dial.count + 1, length: number.count))
-                
-                
-                return attributedString
-                
-            } else {
-                //                    print("No match found")
-                return nil
-            }
-        } catch {
-            print("Error creating regex: \(error)")
-            return nil
-        }
-    }
-    
-    
-    func URLhandler(_ myURL: String) {
-        if let url = URL(string: myURL) {
-            if UIApplication.shared.canOpenURL(url) {
-                UIApplication.shared.open(url, options: [:], completionHandler: { (success) in
-                    if success {
-                        print("success")
-                    } else {
-                        print("fail")
-                    }
-                })
-            } else {
-                print("device may not support")
-            }
-        } else {
-            print("invalid format")
-        }
-    }
+
+
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        return banksData.count
         return banksData[section].isExpanded
         ? banksData[section].actions.more.count + banksData[section].actions.recommended.count
         : 0
     }
-    
-    func getPhoneType(_ type: String) -> Bool {
-        if type == "phone" {
-            return true
-        }else {
-            return false
-        }
-    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
-        cell.selectionStyle = .none
-        
+
         let bankActions = banksData[indexPath.section].actions
-        //        print("indexpath S", indexPath.section)
-        //        print("indexpath R", indexPath.row)
-        
-        let totalRecommended = bankActions.recommended.count
-        let totalMore = bankActions.more.count
-        var isPhoneType = false
-        var titleText = ""
-        
-        if indexPath.row == 0 && totalRecommended > 0 {
-            cell.tv_typeBar.isHidden = false
-            cell.lb_typeBar.text = recommendedText
-            let phoneType = bankActions.recommended[indexPath.row].type
-            isPhoneType = getPhoneType(phoneType)
-            titleText = bankActions.recommended[indexPath.row].titleEn
-            
-        } else if indexPath.row == totalRecommended && totalMore > 0 {
-            cell.tv_typeBar.isHidden = false
-            cell.lb_typeBar.text = moreText
-            let moreIndex = indexPath.row - totalRecommended
-            let phoneType = bankActions.more[moreIndex].type
-            isPhoneType = getPhoneType(phoneType)
-            titleText = bankActions.more[moreIndex].titleEn
-        } else {
-            cell.tv_typeBar.isHidden = true
-            if indexPath.row < totalRecommended {
-                let phoneType = bankActions.recommended[indexPath.row].type
-                isPhoneType = getPhoneType(phoneType)
-                titleText = bankActions.recommended[indexPath.row].titleEn
-            } else {
-                let moreIndex = indexPath.row - totalRecommended
-                let phoneType = bankActions.more[moreIndex].type
-                isPhoneType = getPhoneType(phoneType)
-                titleText = bankActions.more[moreIndex].titleEn
-            }
-        }
-        
-        if (isPhoneType){
-            cell.lb_text.attributedText = splitPhoneString(titleText)
-        }else {
-            cell.lb_text.text = titleText
-        }
-        
-        
+        cell.configure(data: bankActions, indexPath: indexPath)
+
         return cell
-        
     }
-    
-    func redirectAction(urlEn: String, type: String) {
-        print("urlEn: \(urlEn), type: \(type)")
-        //               if type == "link" {
-        
-        //               } else if type == "phone" {
-        //                   URLhandler(urlEn)
-        //               }
-        URLhandler(urlEn)
-    }
-    
+
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableview.deselectRow(at: indexPath, animated: false)
-        
+
         let bankActions = banksData[indexPath.section].actions
-        
         let allActions = bankActions.recommended + bankActions.more
-        
+
         guard indexPath.row < allActions.count else {
             return
         }
-        
+
         let selectedAction = allActions[indexPath.row]
-        redirectAction(urlEn: selectedAction.urlEn, type: selectedAction.type)
+        helper.URLhandler(selectedAction.urlEn)
     }
-    
+
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let header = CustomHeaderView()
-        header.lb_title.text = banksData[section].nameEn
-        header.lb_desc.text = banksData[section].descEn
+        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: CustomHeaderView.identifier) as! CustomHeaderView
+
+        let data = banksData[section]
+        header.configure(data)
+
         header.tapAction = { [weak self] in
             self?.headerTapped(section: section)
         }
         return header
     }
-    
+
     private func headerTapped(section: Int) {
         print("Header tapped in section: \(section)")
         let isExpanded = banksData[section].isExpanded
         banksData[section].isExpanded = !isExpanded
-        
+
         tableview.reloadSections(NSIndexSet(index: section) as IndexSet, with: .automatic)
-        
+
         // Can set when anther cell clicked close your before cell
-        //                   for (index, _) in banksData.enumerated() {
-        //                       if index != section {
-        //                           banksData[index].isExpanded = false
-        //                       }
-        //                   }
+        //        for (index, _) in banksData.enumerated() {
+        //            if index != section {
+        //                banksData[index].isExpanded = false
+        //            }
+        //        }
         //
-        //                   tableview.beginUpdates()
-        //                   tableview.reloadSections(IndexSet(integersIn: 0..<banksData.count), with: .automatic)
-        //                   tableview.endUpdates()
-        
+        //        tableview.beginUpdates()
+        //        tableview.reloadSections(IndexSet(integersIn: 0..<banksData.count), with: .automatic)
+        //        tableview.endUpdates()
+
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return banksData.count
     }
-    
+
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 54.0
+        return tableView.bounds.height / 9.0
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
-    
+
 }
 
