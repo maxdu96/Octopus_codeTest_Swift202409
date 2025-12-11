@@ -1,15 +1,11 @@
-# A IOS developer code test from Octopus HK
-This project is only to share my experience. If there is any offense, please contact me for deletion.
+# An IOS developer code test from Octopus Hong Kong
+This project is only to share my experience. If there is any offense, please contact me to have it deleted.
 ___
 
-The first interview started in mid-August 2024, and I received the result in mid-October 2024. During this period, there were three interviews and one skill test. One candidate scored higher than me (my score was above 85, which theoretically reached the score for an offer). However, due to the lack of headcount, I was not selected, so I did not receive an offer.
-
+##### Purpose:
+Showing my code style? Please check the copy details, and ignore my commit text ^ ^.
 
 ##### Project Video:
-This project was entirely based on the document's images to create both the UI and functionality. I estimate that I was just a little short of perfection. Did I forget to move the [cellForRowAt] context into the [Tablviewcell] to handle it there?
-
-
-
 https://github.com/user-attachments/assets/2e6f7f26-587f-494a-a02a-2abbefdbe3fc
 
 
